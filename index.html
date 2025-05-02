@@ -62,7 +62,14 @@
             </p>
         <div class="balloons">🎈 🎈 🎈 🎈 🎈</div>
         <button onclick="alert('🎂 Make a wish!')">Click Me!</button>
+        <button onclick="document.getElementById('bg-music').play()">🎶 Play Music</button>
     </div>
 
+
+    <audio id="bg-music" src="birthday.mp3" autoplay loop></audio>
+    <script>
+        const audio = document.getElementById("bg-music");
+        audio.volume = 0.1;
+    </script>
     </body>
 </html>
