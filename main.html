@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Happy Birthday!</title>
+        <link rel="stylesheet" href="main.css" />
+    </head>
+
+    <script>
+        window.addEventListener('load', () => {
+        const loadingScreen = document.getElementById('loading-screen');
+        setTimeout(() => {
+            loadingScreen.style.opacity = '0';
+            setTimeout(() => loadingScreen.style.display = 'none', 1000);
+        }, 50000);
+        
+        const paragraph = `Life is an incredible journey filled with unexpected turns, fleeting moments, and boundless opportunities. 
+        In this chaotic whirlwind of existence, it's people like you who bring clarity, warmth, and meaning. 
+        You don't just walk through life - you light it up. Your smile can calm storms, your kindness can heal wounds no one sees, and your laugh is the kind that echoes in hearts long after the sound is gone. 
+        The world is beautiful - but you, my dearest best friend, make it breathtaking. 
+        
+        On your birthday, I want you to remember that you're more than just loved - 
+        you're cherished, you're admired, and you're a reason someone believes in magic. 
+        
+        You are proof that the universe still creates masterpieces. 
+        
+        Here's to you - may you always see the wonder in the world, and may the world never stop seeing the wonder in you.`;
+
+        let i = 0;
+        const typingElement = document.getElementById("typing-text");
+
+        function typeText() {
+            if (i < paragraph.length) {
+            typingElement.textContent += paragraph.charAt(i);
+            i++;
+            setTimeout(typeText, 50);
+            }
+        }
+        typeText();
+        });
+    </script>   
+
+    <body>
+        
+    <div id="loading-screen">
+        <div class="scrolling-text">
+            <h2>"Life should not only be lived, it should be celebrated."</h2>
+            <p class="typing-text" id="typing-text"></p>
+        </div>
+    </div>
+      
+        
+    <div class="overlay"></div>
+
+
+    <div class="container">
+        <h1>🎉 Happy Birthday, Bestie! 🎉</h1>
+            <p class="message">
+            Wishing you joy, laughter, and all the cake you can eat. You're the best friend anyone could ask for!
+            </p>
+        <div class="balloons">🎈 🎈 🎈 🎈 🎈</div>
+        <button onclick="alert('🎂 Make a wish!')">Click Me!</button>
+        <button onclick="document.getElementById('bg-music').play()">🎶 Play Music</button>
+    </div>
+
+
+    <audio id="bg-music" src="birthday.mp3" autoplay loop></audio>
+    <script>
+        const audio = document.getElementById("bg-music");
+        audio.volume = 0.1;
+    </script>
+    </body>
+</html>
