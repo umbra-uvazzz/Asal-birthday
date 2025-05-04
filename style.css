@@ -65,56 +65,7 @@ body {
     white-space: pre-wrap;
     overflow: hidden;
   }
-  
-  
-  /* Blinking caret animation */
-  @keyframes blink-caret {
-    0%, 100% { border-color: transparent; }
-    50% { border-color: #ff5e57; }
-  }
-  
-  
-  .container {
-    text-align: center;
-    background-color: #ffdef7cc;
-    padding: 30px 40px;
-    border-radius: 20px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    max-width: 600px;
-  }
-  
-  h1 {
-    color: #ff5e57;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-  }
-  
-  .message {
-    font-size: 1.2em;
-    color: #333;
-    margin-bottom: 30px;
-  }
-  
-  .balloons {
-    font-size: 2em;
-    margin-bottom: 30px;
-  }
-  
-  button {
-    background-color: #ff5e57;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #e14b45;
-  }
-  
+    
   body {
   margin: 0;
   padding: 0;
@@ -152,11 +103,17 @@ body {
   position: relative;
   z-index: 2;
   text-align: center;
-  background-color: #fff8f0cc;
+  background-color: rgba(255, 248, 240, 0.8);
   padding: 30px 40px;
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  max-width: 500px;
+  max-width: 600px;
+}
+
+@keyframes bgchange {
+  0% {background-color: rgba(255, 248, 240, 0.8)}
+  50% {background-color: #fff0f5;}
+  100% {background-color: rgba(255, 248, 240, 0.8)}
 }
 
 @keyframes gradientMove {
@@ -231,4 +188,8 @@ button:hover {
     position: relative;
     z-index: 3;
   }
-  
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
